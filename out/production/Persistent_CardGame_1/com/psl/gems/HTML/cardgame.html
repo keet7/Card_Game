@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<script lang="javascript">let player1cardOpen = 0;let player2cardOpen = 0;function flipImage( eleId ) { let imageElement = document.getElementById (eleId); let cardImage = imageElement.getAttribute ("datacard"); let src = imageElement.getAttribute("src"); if(src === "images/card.jpg") { if(document.getElementById('player1div')){ player1cardOpen++;  imageElement.src= cardImage;  } if(document.getElementById ('player2div')){ player2cardOpen++; imageElement.src= cardImage; } } else { if(document.getElementById('player1div')){  player1cardOpen--; imageElement.src= "images/card.jpg"; } if(document.getElementById ('player2div')){   player2cardOpen--; imageElement.src= "images/card.jpg"; } } if(player1cardOpen === 3){ highestCardButton1.style.visibility = "visible"; } if(player2cardOpen === 3){ highestCardButton2.style.visibility = "visible"; }  } function showHighestCard(eleId){  let highestDivElement = document.getElementById(eleId);  highestDivElement.style.visibility = "visible"; } function declareWinner(eleId){  let winner = document.getElementById(eleId);  winner.style.visibility = "visible"; }
+</script>
+<link rel="stylesheet" href="K:\Java Project\Persistent_CardGame_1\src\com\psl\gems\HTML\style.css"></head>
+<body>
+<div id="player1div">
+  <h2>Player1</h2>
+  <h3>Name : Divya</h3>
+    <div id="player1card1">
+ <image
+    id="player1card1img"
+    datacard="Images/DIAMOND/FOUR.png"
+   src="images/card.jpg"
+   onclick="flipImage('player1card1img')">
+ </image>
+</div>
+  <div id="player1card2">
+ <image id="player1card2img"
+ datacard="Images/CLUB/FOUR.png"
+src="images/card.jpg"
+onclick="flipImage('player1card2img')">
+</image>
+ </div>
+<div id="player1card3">
+  <image id="player1card3img"
+ datacard="Images/SPADE/TWO.png"
+    src="images/card.jpg"
+   onclick="flipImage('player1card3img')">
+</image>
+   </div>
+    <button id="highestCardButton1"
+ onclick="showHighestCard('player1HighestCardDisplay')"
+>Show Highest Card</button>
+</div> <div id="player2div">
+  <h2>Player2</h2>
+ <h3>Name : Keerthana</h3>
+ <div id="player2card1">
+ <image
+ id="player2card1img"
+ datacard="Images/SPADE/TEN.png"
+ src="images/card.jpg"
+ onclick="flipImage('player2card1img')"
+ ></image>
+ </div>
+ <div id="player2card2">
+ <image id="player2card2img"
+  datacard="Images/CLUB/NINE.png" 
+src="images/card.jpg"
+ onclick="flipImage('player2card2img')">
+</image>
+ </div>
+ <div id="player2card3">
+ <image id="player2card3img"
+ datacard="Images/DIAMOND/QUEEN.png"
+ src="images/card.jpg"
+ onclick="flipImage('player2card3img')">
+</image>
+ </div> 
+ <button id="highestCardButton2"
+ onclick="showHighestCard ('player2HighestCardDisplay')"
+>Show Highest Card</button>
+ </div> <div id="player1HighestCardDisplay">
+ <image id="player1HighestCardimg"
+ src="Images/CLUB/FOUR.png">
+</image>
+  <h2 class="points">Points Earned 18</h2> 
+</div> <div id="player2HighestCardDisplay">
+ <image id="player2HighestCardimg"
+ src="Images/CLUB/NINE.png">
+</image>
+ <h2 class="points">Points Earned 23</h2> 
+</div> <button id="decideWinnerButton"
+ onclick="declareWinner('winner')">
+Decide Winner
+</button> <div id="winner">
+ <p> Player 2 Keerthana is the winner of the game.</p>
+ </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+#player1div {
+  display: inline-block;
+  width: 500px;
+  margin-left: 150px;
+  margin-right: 200px;
+}
+#player2div {
+  display: inline-block;
+  width: 500px;
+}
+#player1card1 {
+  display: inline-block;
+}
+#player1card2 {
+  display: inline-block;
+}
+#player1card3 {
+  display: inline-block;
+}
+#player2card1 {
+  display: inline-block;
+}
+#player2card2 {
+  display: inline-block;
+}
+#player2card3 {
+  display: inline-block;
+}
+#player1card1img {
+  width: 150px;
+  height: 250px;
+}
+#player1card2img {
+  width: 150px;
+  height: 250px;
+}
+#player1card3img {
+  width: 150px;
+  height: 250px;
+}
+#player2card1img {
+  width: 150px;
+  height: 250px;
+}
+#player2card2img {
+  width: 150px;
+  height: 250px;
+}
+#player2card3img {
+  width: 150px;
+  height: 250px;
+}
+#decideWinnerButton{
+  margin-left: 650px;
+  margin-top: 100px;
+}
+#highestCardButton1{
+  margin-top: 30px;
+  visibility: hidden;
+}
+#highestCardButton2{
+  margin-top: 30px;
+  visibility: hidden;
+}
+
+#player1HighestCardDisplay{
+  display: inline-block;
+  visibility: hidden;
+  width: 500px;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-right: 200px;
+}
+
+#player2HighestCardDisplay{
+  display: inline-block;
+  visibility: hidden;
+}
+
+#player1HighestCardimg{
+  width: 150px;
+  height: 250px;
+}
+
+#player2HighestCardimg{
+  width: 150px;
+  height: 250px;
+}
+
+.points{
+  display: inline-block;
+  width: 150px;
+  height: 20px;
+}
+
+#winner{
+  margin-left: 610px;
+  visibility: hidden;
+}
